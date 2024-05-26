@@ -1,0 +1,17 @@
+.border{
+    border: 2px solid blueviolet;
+    margin: 3px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+
+.items-center{
+    align-items: center;
+}
