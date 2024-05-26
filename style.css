@@ -15,3 +15,14 @@ body{
 .right{
     width: 75vw;
 }
+
+
+.home{
+    padding: 15px;
+}
+.home ul li{
+    display: flex;
+    width: 16px;
+    list-style: none;
+    gap: 15px;
+}
