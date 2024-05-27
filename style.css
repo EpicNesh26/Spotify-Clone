@@ -6,6 +6,7 @@
 body{
     /* background-color: black;
     color: white; */
+    font-family: Helvetica, sans-serif;
 }
 
 .left{
@@ -16,13 +17,29 @@ body{
     width: 75vw;
 }
 
+.logo{
+    padding-bottom: 5px;
+}
 
 .home{
-    padding: 15px;
+    padding: 2px 0px;
 }
 .home ul li{
     display: flex;
-    width: 16px;
+    width: 20px;
     list-style: none;
     gap: 15px;
+    padding: 10px 1px;
+    font-weight: 700;
+}
+
+.library ul li{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    font-weight: 700;
+}
+
+.lib{
+    width: 20px;
 }
