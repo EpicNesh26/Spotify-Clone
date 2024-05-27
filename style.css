@@ -33,6 +33,11 @@ body{
     font-weight: 700;
 }
 
+.library{
+    height: 69.7vh;
+    position: relative;
+}
+
 .library ul li{
     display: flex;
     list-style: none;
@@ -42,4 +47,26 @@ body{
 
 .lib{
     width: 20px;
+}
+
+.footer{
+    display: flex;
+    font-size: 12px;
+    width: 20vw;
+    color: grey;
+    gap: 15px;
+    padding: 10px;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer a{
+    text-decoration: none;
+    color: grey;
+    font-weight: 400;
+}
+
+.btn{
+    width: 100px;
 }
