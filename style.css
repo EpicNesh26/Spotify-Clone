@@ -67,6 +67,17 @@ body{
     font-weight: 400;
 }
 
-.btn{
-    width: 100px;
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header *{
+    padding: 4px;
+    margin: 4px 5px;
+}
+
+.nav svg{
+    background-color: #0000006b;
+    border-radius: 50px;
 }
