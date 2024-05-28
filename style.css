@@ -70,6 +70,8 @@ body{
 .header{
     display: flex;
     justify-content: space-between;
+    background-color: #101010;
+    border-radius: 7px 7px 0px 0px;
 }
 
 .header *{
@@ -80,4 +82,68 @@ body{
 .nav svg{
     background-color: #0000006b;
     border-radius: 50px;
+}
+
+.buttons button{
+    font-size: 14px;
+    font-weight: 700;
+}
+.buttons button:first-child{
+    background-color: #101010;
+    border: none;
+    color: grey;
+    padding: 15px;
+    margin: 0px 10px;
+}
+
+.buttons button:nth-child(2){
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    padding: 10px 25px;
+}
+
+
+.spotifyPlaylists{
+    padding: 10px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.spotifyPlaylists h1{
+    margin: 15px 0;
+}
+
+.card{
+    width: 180px;
+    height: 240px;
+    /* overflow: hidden; */
+    /* border: 2px solid red; */
+}
+
+.card img{
+    width: 170px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: contain;
+}
+.card h2{
+    font-size: 14px;
+    font-weight: 500;
+    margin: 2px 0;
+    color: white;
+}
+
+.card p{
+    font-size: 10px;
+    color: grey;
+    font-weight: 400;
+    width: 150px;
+    padding: 2px 0;
+}
+
+.cardContainer{
+    display: flex;
+    gap: 10px;
 }
