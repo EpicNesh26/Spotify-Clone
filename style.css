@@ -112,27 +112,38 @@ body{
 }
 
 .spotifyPlaylists h1{
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 .card{
-    width: 180px;
+    width: 160px;
     height: 240px;
     /* overflow: hidden; */
+    border: 2px solid #121212;
+    background-color: #101010;
+    
     /* border: 2px solid red; */
+    /* padding: 5px; */
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: center;
+    border-radius: 12px;
+    padding: 10px;
 }
 
 .card img{
-    width: 170px;
+    width: 160px;
     height: 180px;
     border-radius: 12px;
     object-fit: contain;
+    /* margin: 0 auto; */
 }
 .card h2{
     font-size: 14px;
     font-weight: 500;
     margin: 2px 0;
     color: white;
+    /* margin:  0px 10px; */
 }
 
 .card p{
@@ -141,9 +152,11 @@ body{
     font-weight: 400;
     width: 150px;
     padding: 2px 0;
+    /* margin: 2px 10px; */
 }
 
 .cardContainer{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
