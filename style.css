@@ -73,11 +73,13 @@ body {
     justify-content: space-between;
     background-color: #101010;
     border-radius: 7px 7px 0px 0px;
+    height: 70px;
 }
 
 .header * {
     padding: 4px;
     margin: 4px 5px;
+    gap: 15px;
 }
 
 .nav svg {
@@ -90,22 +92,30 @@ body {
     font-weight: 700;
 }
 
-.buttons button:first-child {
+.signupbutton{
     background-color: #101010;
     border: none;
     color: grey;
     padding: 15px;
-    margin: 0px 10px;
+    /* margin: 0px 10px; */
 }
 
-.buttons button:nth-child(2) {
+.signupbutton:hover{
+    color: white;  
+}
+
+.loginbutton{
     background-color: white;
     color: black;
     border-radius: 50px;
     border: none;
     padding: 10px 25px;
+    font-weight: normal;
 }
 
+.loginbutton:hover{
+
+}
 
 .spotifyPlaylists {
     padding: 10px;
@@ -163,6 +173,8 @@ body {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    max-height: 70vh;
+    overflow-y: scroll;
 }
 
 .play img {
