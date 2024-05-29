@@ -15,6 +15,8 @@ body {
 
 .right {
     width: 75vw;
+    position: relative;
+    
 }
 
 .logo {
@@ -195,4 +197,20 @@ body {
     bottom: 82px;
     opacity: 0;
     transition: all 1s ease-out;
+}
+
+.playbar{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    background-color: green;
+    margin-left: 4%;
+    padding: 10px 10px;
+    
+}
+
+.playbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
