@@ -1,30 +1,31 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     /* background-color: black;
     color: white; */
     font-family: Helvetica, sans-serif;
 }
 
-.left{
+.left {
     width: 25vw;
 }
 
-.right{
+.right {
     width: 75vw;
 }
 
-.logo{
+.logo {
     padding-bottom: 5px;
 }
 
-.home{
+.home {
     padding: 2px 0px;
 }
-.home ul li{
+
+.home ul li {
     display: flex;
     width: 20px;
     list-style: none;
@@ -33,23 +34,23 @@ body{
     font-weight: 700;
 }
 
-.library{
+.library {
     height: 69.7vh;
     position: relative;
 }
 
-.library ul li{
+.library ul li {
     display: flex;
     list-style: none;
     gap: 15px;
     font-weight: 700;
 }
 
-.lib{
+.lib {
     width: 20px;
 }
 
-.footer{
+.footer {
     display: flex;
     font-size: 12px;
     width: 20vw;
@@ -61,34 +62,35 @@ body{
     bottom: 0;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
     color: grey;
     font-weight: 400;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     background-color: #101010;
     border-radius: 7px 7px 0px 0px;
 }
 
-.header *{
+.header * {
     padding: 4px;
     margin: 4px 5px;
 }
 
-.nav svg{
+.nav svg {
     background-color: #0000006b;
     border-radius: 50px;
 }
 
-.buttons button{
+.buttons button {
     font-size: 14px;
     font-weight: 700;
 }
-.buttons button:first-child{
+
+.buttons button:first-child {
     background-color: #101010;
     border: none;
     color: grey;
@@ -96,7 +98,7 @@ body{
     margin: 0px 10px;
 }
 
-.buttons button:nth-child(2){
+.buttons button:nth-child(2) {
     background-color: white;
     color: black;
     border-radius: 50px;
@@ -105,23 +107,23 @@ body{
 }
 
 
-.spotifyPlaylists{
+.spotifyPlaylists {
     padding: 10px;
     font-size: 10px;
     font-weight: 700;
 }
 
-.spotifyPlaylists h1{
+.spotifyPlaylists h1 {
     margin: 5px 0;
 }
 
-.card{
+.card {
     width: 160px;
     height: 240px;
     /* overflow: hidden; */
     border: 2px solid #121212;
     background-color: #101010;
-    
+
     /* border: 2px solid red; */
     /* padding: 5px; */
     /* display: flex;
@@ -129,16 +131,18 @@ body{
     justify-content: center;
     border-radius: 12px;
     padding: 10px;
+    position: relative;
 }
 
-.card img{
+.card img {
     width: 160px;
     height: 180px;
     border-radius: 12px;
     object-fit: contain;
     /* margin: 0 auto; */
 }
-.card h2{
+
+.card h2 {
     font-size: 14px;
     font-weight: 500;
     margin: 2px 0;
@@ -146,7 +150,7 @@ body{
     /* margin:  0px 10px; */
 }
 
-.card p{
+.card p {
     font-size: 10px;
     color: grey;
     font-weight: 400;
@@ -155,8 +159,31 @@ body{
     /* margin: 2px 10px; */
 }
 
-.cardContainer{
+.cardContainer {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+}
+
+.play img {
+
+    width: 20px;
+    height: 30px;
+    padding-left: 2px;
+}
+
+
+.play {
+    width: 20px;
+    height: 30px;
+    padding-left: 6px;
+    background-color: #1fdf64;
+    padding: 10px;
+    padding-bottom: 10px;
+    border-radius: 50%;
+    position: absolute;
+    right: 14px;
+    bottom: 82px;
+    opacity: 0;
+    transition: all 1s ease-out;
 }
