@@ -19,4 +19,11 @@ async function fetchSongs() {
 document.addEventListener('DOMContentLoaded', async () => {
     const songUrls = await fetchSongs();
     console.log("Song URLs:", songUrls);
+    var audio = new Audio(songUrls[0])
+    audio.play();
+
+    audio.addEventListener("loadeddata", () => {
+        console.log(audio.duration, audio.currentSrc, audio.currentTime)
+    })
 });
+
