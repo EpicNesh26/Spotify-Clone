@@ -1,29 +1,22 @@
 console.log("Lets start Javascript")
 
 
-// async function main() {
-//     let a = await fetch("http://127.0.0.1:5500/songs/");
-//     let response = await a.text();
-//     console.log(response)
-//     let div = document.createElement("div");
-//     div.innerHTML = response;
-//     let as = div.getElementsByTagName("a");
-//     let songs = []
-//     for (let index = 0; index < as.length; index++) {
-//         const element = array[index];
-//         if(element.href.endsWith(".mp3")){
-//             songs.push(element.href)
+async function fetchSongs() {
+    const response = await fetch("http://127.0.0.1:5500/songs/");
+    const text = await response.text();
+    
+    // Parse the HTML response to extract song URLs
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, 'text/html');
+    const links = doc.querySelectorAll('a');
+    const songUrls = Array.from(links)
+        .map(link => link.href)
+        .filter(href => href.endsWith('.mp3'));
 
-//         }
-//     }
-//     return songs
+    return songUrls;
+}
 
-// }
-
-// async function main(){
-//     let songs = await getSongs()
-//     console.log(songs)
-
-//     var audio = new Audio(songs[0]);
-//     audio.play();
-// }
+document.addEventListener('DOMContentLoaded', async () => {
+    const songUrls = await fetchSongs();
+    console.log("Song URLs:", songUrls);
+});
