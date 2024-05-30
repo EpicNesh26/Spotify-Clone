@@ -1,4 +1,4 @@
-console.log("Lets start Javascript")
+// console.log("Lets start Javascript")
 
 
 async function fetchSongs() {
@@ -12,9 +12,9 @@ async function fetchSongs() {
     const songUrls = Array.from(links)
         .map(link => link.href)
         .filter(href => href.endsWith('.mp3'));
-
     return songUrls;
 }
+
 
 document.addEventListener('DOMContentLoaded', async () => {
     const songUrls = await fetchSongs();
@@ -26,4 +26,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log(audio.duration, audio.currentSrc, audio.currentTime)
     })
 });
-

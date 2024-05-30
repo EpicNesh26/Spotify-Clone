@@ -214,3 +214,13 @@ body {
     justify-content: center;
     gap: 12px;
 }
+
+.songlist ul{
+    padding: 10px 0px;
+    width: 100%;
+}
+
+.songlist ul li{
+    list-style: none;
+    color: white;
+}
