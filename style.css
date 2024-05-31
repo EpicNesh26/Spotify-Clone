@@ -223,22 +223,67 @@ ul{
 .songlist a:link{
     color: white;
     text-decoration: none;
+
+}
+
+.songlist li{
+    padding: 10px 0;
 }
 
 .songlist a:visited{
     color: white;
 }
 .songlist ul{
-    padding: 10px 0px;
+    /* padding: 10px 0px; */
     width: 80%;
     height: 100%;
     color: white;
 
 }
 
-.songlist ul li{
-    /* list-style-type: none; */
+.songlist li{
     color: white;
     text-decoration: none;
-    gap: 15px;
+    /* gap: 15px; */
+    border: 1px solid white;
+    margin: 8px 2px;
+    border-radius: 5px;
+    padding: 10px;
+    width: 290px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px;
+    
+}
+.heading{
+    padding-bottom: 10px;
+}
+
+.playnow{
+    display: flex;
+    width: 112px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.playnow span{
+    font-size: 12px;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.songlist{
+    max-height: 55vh;
+    overflow-y: scroll;
+}
+
+.info{
+    font-size: 12px;
+    width: 890px;
+}
+.info div:first-child{
+    font-size: 14px;
+    font-weight: 600;
 }
