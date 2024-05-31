@@ -216,13 +216,29 @@ body {
     gap: 12px;
 }
 
+ul{
+    list-style: none;
+}
+
+.songlist a:link{
+    color: white;
+    text-decoration: none;
+}
+
+.songlist a:visited{
+    color: white;
+}
 .songlist ul{
     padding: 10px 0px;
-    width: 100%;
+    width: 80%;
     height: 100%;
+    color: white;
+
 }
 
 .songlist ul li{
-    list-style: none;
+    /* list-style-type: none; */
     color: white;
+    text-decoration: none;
+    gap: 15px;
 }

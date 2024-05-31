@@ -44,14 +44,22 @@ async function fetchSongs() {
     return songUrls;
 }
 
+function formatSongName(url) {
+    // Remove part before /songs/ and replace %20 with space
+    const songPath = url.split('/songs/')[1];
+    const decodedName = decodeURIComponent(songPath);
+    return decodedName.replace('.mp3', '');
+}
+
+
 function displaySongs(songUrls) {
     const ul = document.querySelector('ul.songlist');
-    ul.innerHTML = ''; // Clear any existing content
+    // ul.innerHTML = ''; // Clear any existing content
     songUrls.forEach(url => {
         const li = document.createElement('li');
         const a = document.createElement('a');
         a.href = url;
-        a.textContent = url; // Display the full URL
+        a.textContent = formatSongName(url); // Display formatted song name
         li.appendChild(a);
         ul.appendChild(li);
     });
