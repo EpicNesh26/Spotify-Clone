@@ -41,11 +41,12 @@ body {
     position: relative;
 }
 
-.library ul li {
+.library .heading{
     display: flex;
     list-style: none;
     gap: 15px;
     font-weight: 700;
+    font-size: 15px;
 }
 
 .lib {
@@ -218,6 +219,7 @@ body {
 .songlist ul{
     padding: 10px 0px;
     width: 100%;
+    height: 100%;
 }
 
 .songlist ul li{
