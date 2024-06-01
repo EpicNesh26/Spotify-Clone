@@ -254,6 +254,7 @@ ul{
     /* justify-content: space-between; */
     align-items: center;
     padding: 10px;
+    height: 40px;
     
 }
 .heading{
@@ -282,6 +283,7 @@ ul{
 .info{
     font-size: 12px;
     width: 890px;
+
 }
 .info div:first-child{
     font-size: 14px;
