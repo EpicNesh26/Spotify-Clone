@@ -314,6 +314,10 @@ ul{
     border-radius: 12px;
 }
 
+.hamburger{
+    display: none;
+}
+
 .playbuttons:hover{
     cursor: pointer;
 }
@@ -371,5 +375,8 @@ ul{
     }
     .spotifyPlaylists{
         height:max-content;
+    }
+    .hamburger{
+        display: block;
     }
 }
