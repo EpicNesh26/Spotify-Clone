@@ -361,6 +361,10 @@ ul{
         position: fixed;
     }
 
+    .seekbar{
+        width: 94%;
+    }
+
     .cardContainer{
         max-height: 70vh;
         overflow-y: scroll;
