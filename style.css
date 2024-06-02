@@ -16,7 +16,7 @@ body {
 .right {
     width: 75vw;
     position: relative;
-    
+    background-color: black;
 }
 
 .logo {
@@ -201,12 +201,12 @@ body {
 }
 
 .playbar{
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    width: 90%;
+    width: 70%;
     background-color: rgb(223, 223, 223);
-    margin-left: 4%;
-    margin-bottom: 4px;
+    margin:1%;
+    margin-bottom: 1%;
     padding: 10px 10px;
     filter: invert(1);
     border-radius: 12px;
@@ -340,3 +340,32 @@ ul{
 }
 
 
+@media (max-width:1435px){
+    .left{
+        background-color: red;
+        position: absolute;
+        left: -100%;
+        transition: all 3s;
+        z-index: 1;
+    }
+    body{
+        background-color: black;
+    }
+
+    .right{
+        width: 100vw;
+    }
+
+    .playbar{
+        width: 95%;
+        position: fixed;
+    }
+
+    .cardContainer{
+        max-height: 70vh;
+        overflow-y: scroll;
+    }
+    .spotifyPlaylists{
+        height:max-content;
+    }
+}
