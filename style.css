@@ -405,6 +405,19 @@ ul{
     }
 }
 
+@media (max-width:1434px){
+    .hamburger1{
+        display: flex;
+        height: 25px;
+        padding-bottom: 6px;
+        transform: scalex(-1);
+    }
+    .logo{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
 @media (max-width:1120px){
     .songlist li{
         width: 175px;
@@ -421,12 +434,12 @@ ul{
         justify-content: space-between;
     }
 
-    .hamburger1{
+    /* .hamburger1{
         display: flex;
         height: 25px;
         padding-bottom: 6px;
         transform: scaleX(-1);
-    }
+    } */
     .playbar{
         margin: 0;
         margin-bottom: 4px;
@@ -501,7 +514,7 @@ ul{
 
     .songlist li{
         width: 323px;
-        /* max-width: 80vw; */
+        max-width: 75vw;
     }
 
     .info div:first-child{
@@ -532,4 +545,13 @@ ul{
     }
 
 
+}
+@media (max-width:420px){
+    .header *{
+        margin: 3px 0px;
+        /* padding: 0; */
+    }
+    .songlist li{
+        width: 370px;
+    }
 }
