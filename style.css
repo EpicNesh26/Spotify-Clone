@@ -352,7 +352,7 @@ ul{
     .left{
         background-color: red;
         position: absolute;
-        left: -100%;
+        left: -110%;
         transition: all 2s;
         z-index: 1;
     }
@@ -400,8 +400,8 @@ ul{
     }
 
     .hamburger1{
-        display: inline;
-        
+        display: none;
+        height: 25px;
     }
 }
 
@@ -432,4 +432,104 @@ ul{
         margin-bottom: 4px;
         
     }
+}
+
+@media (max-width:1000px){
+    .left{
+        width: 40vw;
+    }
+    .songlist li{
+        width: 230px;
+    }
+    .footer{
+        width: 37vw;
+    }
+}
+@media (max-width:900px){
+    .left{
+        width: 40vw;
+    }
+    .songlist li{
+        max-width: 250px;
+    }
+    .footer{
+        width: 37vw;
+    }
+}
+@media (max-width:800px){
+    .left{
+        width: 50vw;
+    }
+    .songlist li{
+        max-width: 250px;
+    }
+    .footer{
+        width: 37vw;
+    }
+}
+@media (max-width:700px){
+    .left{
+        width: 50vw;
+    }
+    .songlist li{
+        max-width: 250px;
+    }
+    .footer{
+        width: 37vw;
+    }
+}
+
+@media (max-width:600px){
+    .left{
+        width: 50vw;
+    }
+    .songlist li{
+        max-width: 250px;
+    }
+    .footer{
+        width: 37vw;
+    }
+}
+
+@media (max-width:500px){
+    .left{
+        width: 100vw;
+    }
+    .footer{
+        width: 80vw;
+    }
+
+    .songlist li{
+        width: 323px;
+        /* max-width: 80vw; */
+    }
+
+    .info div:first-child{
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .playbar{
+        margin-bottom: 12px;
+        width: 83%;
+    }
+    .seekbar{
+        width: 90%;
+        margin: 0 15px;
+    }
+    .abovebar .songinfo{
+        font-size: 10px;
+    }
+
+    .abovebar .songtime{
+        font-size: 10px;
+    }
+    .cardContainer{
+        max-height: 79vh;
+    }
+    .header *{
+        margin: 3px 8px;
+    }
+
+
 }
