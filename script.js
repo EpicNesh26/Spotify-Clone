@@ -217,3 +217,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.getElementById('play').addEventListener('click', togglePlayPause);
     document.getElementById('next').addEventListener('click', playNextSong);
 });
+
+
+document.querySelector(".hamburger").addEventListener("click", ()=>{
+    document.querySelector(".left").style.left ="0"
+})
+
+document.querySelector(".hamburger1").addEventListener("click", ()=>{
+    document.querySelector(".left").style.left ="-100%"
+})
