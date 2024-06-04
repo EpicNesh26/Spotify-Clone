@@ -1,10 +1,15 @@
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM fully loaded and parsed");})
+
+
 let currentAudio = null;
 let currentSongIndex = 0;
 let songUrls = [];
 let playtimeInterval = null;
 
-async function fetchSongs() {
-    const response = await fetch("http://127.0.0.1:5500/songs/");
+async function fetchSongs(album) {
+    const response = await fetch(`http://127.0.0.1:5500/songs/${album}/`);
     const text = await response.text();
 
     // Parse the HTML response to extract song URLs
@@ -18,8 +23,8 @@ async function fetchSongs() {
 }
 
 function formatSongName(url) {
-    // Remove part before /songs/, decode URI components, and remove .mp3
-    const songPath = url.split('/songs/')[1];
+    // Extract the song name from the URL and decode it
+    const songPath = url.split('/').pop();
     const decodedName = decodeURIComponent(songPath);
     return decodedName.replace('.mp3', '');
 }
@@ -168,13 +173,12 @@ function updateSeekBar() {
 
 function seek(event) {
     const seekbar = document.querySelector('.seekbar');
-    const circle = document.querySelector('.seekbar .circle');
     const rect = seekbar.getBoundingClientRect();
     const offsetX = event.clientX - rect.left;
     const percentage = offsetX / rect.width;
-    const seekTime = percentage * currentAudio.duration;
-    currentAudio.currentTime = seekTime;
-    updateSeekBar();
+    if (currentAudio) {
+        currentAudio.currentTime = percentage * currentAudio.duration;
+    }
 }
 
 function initSeekBar() {
@@ -183,41 +187,50 @@ function initSeekBar() {
 
     let isDragging = false;
 
-    circle.addEventListener('mousedown', (event) => {
+    circle.addEventListener('mousedown', () => {
         isDragging = true;
-        document.addEventListener('mousemove', onMouseMove);
-        document.addEventListener('mouseup', onMouseUp);
     });
 
-    function onMouseMove(event) {
-        if (!isDragging) return;
-        seek(event);
-    }
+    document.addEventListener('mousemove', (event) => {
+        if (isDragging) {
+            seek(event);
+        }
+    });
 
-    function onMouseUp(event) {
-        if (!isDragging) return;
-        isDragging = false;
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('mouseup', onMouseUp);
-        seek(event);
-    }
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+            isDragging = false;
+        }
+    });
 
     seekbar.addEventListener('click', (event) => {
         seek(event);
     });
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    songUrls = await fetchSongs();
-    console.log("Song URLs:", songUrls);
-    displaySongs(songUrls);
-    initSeekBar();
+const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.addEventListener('click', async () => {
+            const album = card.getAttribute('data-album');
+            console.log(`Fetching songs from album: ${album}`);
+            if (album) {
+                try {
+                    const songUrls = await fetchSongs(album);
+                    console.log(`Songs fetched: ${songUrls}`);
+                    displaySongs(songUrls);
+                } catch (error) {
+                    console.error(`Error fetching songs for album ${album}:`, error);
+                }
+            }
+        });
+    
 
-    document.getElementById('previous').addEventListener('click', playPreviousSong);
+
+    // Set up play buttons
     document.getElementById('play').addEventListener('click', togglePlayPause);
+    document.getElementById('previous').addEventListener('click', playPreviousSong);
     document.getElementById('next').addEventListener('click', playNextSong);
 });
-
 
 document.querySelector(".hamburger").addEventListener("click", ()=>{
     document.querySelector(".left").style.left ="0"
