@@ -3,7 +3,7 @@
 This project is a simple Spotify clone built using HTML, CSS, and JavaScript. It allows users to play songs from different albums, control playback, and manage volume. The project demonstrates basic web development skills, including handling events, dynamically updating the DOM, and using the Fetch API to load resources. <br>
 
 ### Hosting
-The website is currently hosted on Vercel. You can view it [here](spotify-clone-delta-ochre.vercel.app).
+The website is currently hosted on Vercel. You can view it [here](https://spotify-clone-delta-ochre.vercel.app/).
 
 In the future, the project will be hosted on Freehostmost after making some additional fixes and improvements.
 
