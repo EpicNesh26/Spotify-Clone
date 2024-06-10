@@ -13,7 +13,6 @@ In the future, the project will be hosted on Freehostmost after making some addi
 - Play, pause, and skip songs.
 - Display the current song's information and duration.
 - Show and update the song's current playback time.
-- Adjust volume using a volume control button.
 - Seek through the song using a draggable seek bar.
 - Mobile-friendly touch support for album selection.
 
